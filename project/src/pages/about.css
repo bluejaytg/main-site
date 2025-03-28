@@ -1,0 +1,111 @@
+/* General Styling */
+:root {
+  --primary: #71acef; /* Deep Blue */
+  --light: #F4F4F4; /* Light Gray */
+  --accent: #FF6B35; /* Vibrant Orange */
+  --secondary: #2C9C6A; /* Emerald Green */
+  --white: #FFFFFF; /* Pure White */
+  --text-dark: #333333; /* Dark Gray for text */
+}
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Page Layout */
+  .about-container {
+    padding: 5rem 1rem;
+    background-color: var(--light);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .prose {
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-gray);
+  }
+  
+  .prose h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .prose p {
+    margin-bottom: 2rem;
+  }
+  
+  /* Header Section */
+  .about-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .about-header p {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+  }
+  
+  /* Team Section */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .team-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Team Member Card */
+  .team-member-card {
+    background-color: var(--white);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-member-card img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .team-member-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member-card p {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin: 0;
+  }
+  

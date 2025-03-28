@@ -1,0 +1,44 @@
+/* General */
+:root {
+  --primary: #71acef; /* Deep Blue */
+  --light: #F4F4F4; /* Light Gray */
+  --accent: #FF6B35; /* Vibrant Orange */
+  --secondary: #2C9C6A; /* Emerald Green */
+  --white: #FFFFFF; /* Pure White */
+  --text-dark: #333333; /* Dark Gray for text */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Section Header */
+  .text-center h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1B263B;
+  }
+  
+  .text-center p {
+    color: #707070;
+    font-size: 1.25rem;
+  }
+  
+  /* Grid Layout */
+  .grid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
