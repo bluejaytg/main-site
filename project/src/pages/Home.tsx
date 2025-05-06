@@ -129,13 +129,13 @@ export function HomePage() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="/contact"
+            href="/consult"
             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 rounded-xl text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             Launch Your Future →
           </a>
           <a
-            href="/contact"
+            href="/services"
             className="px-8 py-4 border-2 border-cyan-400/50 hover:border-cyan-400 rounded-xl text-cyan-300 hover:text-white font-semibold shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
           >
             Explore Solutions
@@ -243,7 +243,6 @@ export function HomePage() {
     </p>
   </div>
 </section>
-
 {/* Unified About & Value Proposition Section */}
 <section className="py-20 bg-gradient-to-br from-blue-900 to-cyan-900 text-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -387,7 +386,7 @@ export function HomePage() {
     {/* CTA */}
     <div className="mt-16 text-center">
       <a
-        href="/process"
+        href="/consult"
         className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
       >
         <span>Explore Our Process</span>
@@ -438,12 +437,11 @@ export function HomePage() {
         Schedule your free AI consultation today and discover how our solutions can drive your business forward.
       </p>
       <a
-        href="/contact"
-        className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-      >
-        <Calendar className="h-5 w-5 mr-2" />
-        Book Free Consultation
-      </a>
+  href="/consult"
+  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-700 to-cyan-500 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition"
+>
+  Explore Consulting Services
+</a>
     </div>
 
     {/* Newsletter */}

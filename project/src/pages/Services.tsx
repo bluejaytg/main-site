@@ -123,7 +123,7 @@ export function Services() {
               Discover practical AI applications tailored to your operations with our free 1-hour consultation
             </p>
             <a
-              href="/consultation"
+              href="https://calendly.com/bluejaytechnologygroup/introduction-to-our-company-clone-1"
               className="inline-flex items-center px-8 py-3 bg-white hover:bg-gray-50 text-blue-600 font-bold rounded-lg shadow-md transition-all duration-300 hover:scale-105"
             >
               <Calendar className="h-5 w-5 mr-2" />

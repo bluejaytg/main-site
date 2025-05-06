@@ -35,9 +35,14 @@ const Contact: React.FC = () => {
               <p className="text-[#707070] mb-4">
                 Schedule a free consultation with our AI experts to discuss your needs and goals.
               </p>
-              <button className="bg-[#3AAFB9] text-white px-6 py-3 rounded-md hover:bg-[#FF007F] transition-colors">
+              <a
+                href="https://calendly.com/bluejaytechnologygroup/introduction-to-our-company-clone-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#3AAFB9] text-white px-6 py-3 rounded-md hover:bg-[#FF007F] transition-colors"
+              >
                 Schedule Meeting
-              </button>
+              </a>
             </div>
           </div>
 
