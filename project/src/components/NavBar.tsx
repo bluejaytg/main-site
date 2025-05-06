@@ -53,7 +53,7 @@ export function NavBar() {
             
             {/* CTA Button */}
             <Link
-              to="/contact"
+              to="/consult"
               className="ml-4 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg
                        font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300
                        flex items-center space-x-2"
@@ -94,7 +94,7 @@ export function NavBar() {
             </Link>
           ))}
           <Link
-            to="/contact"
+            to="/consult"
             className="block px-4 py-3 mt-2 bg-gradient-to-r from-blue-600 to-cyan-500
                      text-white rounded-lg font-semibold shadow-md"
           >
