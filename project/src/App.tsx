@@ -7,8 +7,10 @@ import { AIDemos } from './pages/AIDemos';
 import { CaseStudies } from './pages/CaseStudies';
 import { About } from './pages/About';
 import Contact from './pages/Contact';
+import { AwsCloudSupportPage } from './pages/AwsCloudSupportPage';
 import { WebsiteRebranding } from './pages/website-rebranding';
 import { Consult } from './pages/Consult';
+import { WhoWeHelpPage } from './pages/WhoWeHelpPage';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/consult" element={<Consult />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/WhoWeHelpPage" element={<WhoWeHelpPage />} />
+          <Route path="/aws-support" element={<AwsCloudSupportPage />} />
           <Route path="/website-rebranding" element={<WebsiteRebranding />} />
         </Routes>
       </Layout>

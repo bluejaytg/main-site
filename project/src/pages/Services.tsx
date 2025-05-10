@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Brain, Cloud, Code, Settings, Database, Shield, Bot, LineChart, ArrowRight, Calendar } from 'lucide-react';
-import { ServiceCard } from '../components/ServiceCard';
 import './services.css';
 
 const services = [
@@ -19,8 +19,8 @@ const services = [
   {
     icon: <Cloud className="h-8 w-8" />,
     title: 'Cloud Services',
-    description: 'Secure and scalable cloud infrastructure to support your business growth.',
-    href: '/services/cloud'
+    description: 'Secure and scalable AWS cloud solutions designed for small businesses.',
+    href: '/aws-support'
   },
   {
     icon: <Code className="h-8 w-8" />,
@@ -57,11 +57,9 @@ const services = [
 export function Services() {
   return (
     <section className="relative py-20 bg-gradient-to-b from-blue-50/50 to-white">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10 [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]"></div>
-      
+      <div className="absolute inset-0 opacity-10 [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16 space-y-4 animate-fade-in">
           <span className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
             AI-Powered Solutions
@@ -74,46 +72,43 @@ export function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="group relative bg-white rounded-2xl border border-gray-100/80 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-            >
-              {/* Hover Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-cyan-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
-              
-              <div className="p-6 space-y-4">
-                {/* Icon Container */}
-                <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl shadow-lg">
-                  {React.cloneElement(service.icon, { 
-                    className: "h-8 w-8 text-white stroke-[1.5]" 
-                  })}
-                </div>
+          {services.map((service, index) => {
+            const isCloudService = service.title === 'Cloud Services';
 
-                {/* Content */}
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+            const CardContent = (
+              <div
+                className="group relative bg-white rounded-2xl border border-gray-100/80 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-cyan-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                <div className="p-6 space-y-4">
+                  <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl shadow-lg">
+                    {React.cloneElement(service.icon, {
+                      className: 'h-8 w-8 text-white stroke-[1.5]'
+                    })}
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                  </div>
+                  <div className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors group/cta">
+                    <span className="mr-2">Explore Solution</span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover/cta:translate-x-1" />
+                  </div>
                 </div>
-
-                {/* CTA */}
-                <a
-                  href={service.href}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors group/cta"
-                >
-                  <span className="mr-2">Explore Solution</span>
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover/cta:translate-x-1" />
-                </a>
               </div>
-            </div>
-          ))}
+            );
+
+            return isCloudService ? (
+              <Link to={service.href} key={index} className="block">
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={index}>{CardContent}</div>
+            );
+          })}
         </div>
 
-        {/* Consultation CTA */}
         <div className="mt-20 text-center animate-fade-in-up">
           <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl p-8 shadow-2xl">
             <h3 className="text-2xl font-bold text-white mb-4">

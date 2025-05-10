@@ -14,13 +14,13 @@ export const Consult = () => {
         </p>
 
         <a
-          href="https://www.eventbrite.com/e/1332088064259?aff=oddtdtcreator"
+          href="https://calendly.com/bluejaytechnologygroup/introduction-to-our-company-clone-1"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white text-lg px-8 py-4 rounded-xl shadow-md hover:shadow-xl transition-transform hover:scale-105"
         >
           <Calendar className="h-5 w-5" />
-          Reserve My Spot in the Class
+          Book a Free Discovery Call
         </a>
       </div>
 
@@ -55,7 +55,7 @@ export const Consult = () => {
           href="https://calendly.com/bluejaytechnologygroup/introduction-to-our-company-clone-1"
           className="inline-block px-8 py-3 border-2 border-cyan-500 text-cyan-700 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all"
         >
-          Book a Free Discovery Call
+          Contact Us
         </a>
       </div>
     </section>

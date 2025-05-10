@@ -4,10 +4,8 @@ import { Menu, X, Brain, ArrowRight } from 'lucide-react';
 import { NavItem } from '../types';
 
 const navItems: NavItem[] = [
-  // { title: 'Home', href: '/' },
   { title: 'Services', href: '/services' },
-  // { title: 'AI Demos', href: '/ai-demos' },
-  // { title: 'Case Studies', href: '/case-studies' },
+  { title: 'Who We Help', href: '/whowehelppage' },
   { title: 'About', href: '/about' },
   { title: 'Contact', href: '/contact' },
 ];
@@ -34,7 +32,6 @@ export function NavBar() {
   </span>
 </Link>
 
-  
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex space-x-6">
@@ -103,4 +100,5 @@ export function NavBar() {
         </div>
       )}
     </nav>
-  )};
+  )
+};
