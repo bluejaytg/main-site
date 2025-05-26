@@ -10,6 +10,8 @@ import { Consult } from './pages/Consult';
 import { WhoWeHelpPage } from './pages/WhoWeHelpPage';
 import { WellnessAutomationPage } from './pages/WellnessAutomationPage';
 import { AIWellnessFormPage } from './pages/AIWellnessFormPage';
+import AutomationCheckout from './pages/automation_checkout_flow';
+import SuccessPage from './pages/success';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/website-rebranding" element={<WebsiteRebranding />} />
           <Route path="/ai-wellness-automation" element={<WellnessAutomationPage />} />
           <Route path="/ai-wellness-form" element={<AIWellnessFormPage />} />
+          <Route path="/checkout" element={<AutomationCheckout/>} />
+          <Route path="/success" element={<SuccessPage />} />
         </Routes>
       </Layout>
     </Router>
