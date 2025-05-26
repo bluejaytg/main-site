@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Mail, Phone, Twitter, Linkedin, Github } from 'lucide-react';
+import { Brain, Mail, Phone, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -20,14 +20,29 @@ export function Footer() {
               Empowering businesses with AI-driven innovation and cloud solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-blue-300 hover:text-white transition-colors">
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-300 hover:text-white transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-blue-300 hover:text-white transition-colors">
+              <a
+                href="https://www.linkedin.com/in/bluejay-technology-group-482393268"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-300 hover:text-white transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-blue-300 hover:text-white transition-colors">
-                <Github className="h-5 w-5" />
+              <a
+                href="https://www.instagram.com/bluejaytechnologygroup/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-300 hover:text-white transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -38,21 +53,8 @@ export function Footer() {
             <ul className="space-y-2">
               <li><a href="/services" className="text-blue-200 hover:text-white transition-colors">Services</a></li>
               <li><a href="/about" className="text-blue-200 hover:text-white transition-colors">About Us</a></li>
-              {/* <li><a href="/case-studies" className="text-blue-200 hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="/blog" className="text-blue-200 hover:text-white transition-colors">Blog</a></li> */}
             </ul>
           </div>
-
-          {/* Resources
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="/docs" className="text-blue-200 hover:text-white transition-colors">Documentation</a></li>
-              <li><a href="/pricing" className="text-blue-200 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="/faq" className="text-blue-200 hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="/support" className="text-blue-200 hover:text-white transition-colors">Support</a></li>
-            </ul>
-          </div> */}
 
           {/* Contact */}
           <div>

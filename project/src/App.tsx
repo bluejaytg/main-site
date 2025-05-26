@@ -1,16 +1,15 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/Home';
 import { Services } from './pages/Services';
-import { AIDemos } from './pages/AIDemos';
-import { CaseStudies } from './pages/CaseStudies';
 import { About } from './pages/About';
 import Contact from './pages/Contact';
 import { AwsCloudSupportPage } from './pages/AwsCloudSupportPage';
 import { WebsiteRebranding } from './pages/website-rebranding';
 import { Consult } from './pages/Consult';
 import { WhoWeHelpPage } from './pages/WhoWeHelpPage';
+import { WellnessAutomationPage } from './pages/WellnessAutomationPage';
+import { AIWellnessFormPage } from './pages/AIWellnessFormPage';
 
 function App() {
   return (
@@ -27,6 +26,8 @@ function App() {
           <Route path="/WhoWeHelpPage" element={<WhoWeHelpPage />} />
           <Route path="/aws-support" element={<AwsCloudSupportPage />} />
           <Route path="/website-rebranding" element={<WebsiteRebranding />} />
+          <Route path="/ai-wellness-automation" element={<WellnessAutomationPage />} />
+          <Route path="/ai-wellness-form" element={<AIWellnessFormPage />} />
         </Routes>
       </Layout>
     </Router>
