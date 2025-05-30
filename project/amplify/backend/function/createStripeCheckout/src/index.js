@@ -4,32 +4,25 @@
 /**
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
  */
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const session = await stripe.checkout.sessions.create({
+  payment_method_types: ['card'],
+  mode: 'payment',
+  line_items: [
+    {
+      price: 'price_1RT6uLGTmN7KrpOLZbzJ1AoZ',
+      quantity: 1
+    }
+  ],
+  customer_email: email,
+  success_url: 'https://bluejaytg.com/success',
+  cancel_url: 'https://bluejaytg.com/cancel',
+  metadata: {
+    name,
+    instagram,
+    bookingLink
+  }
+});
 
-exports.handler = async (event) => {
-  const body = JSON.parse(event.body);
-
-  const { name, email, instagram, bookingLink } = body;
-
-  try {
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      mode: 'payment',
-      line_items: [
-        {
-          price: 'price_1RT6uLGTmN7KrpOLZbzJ1AoZ',
-          quantity: 1
-        }
-      ],
-      customer_email: email,
-      success_url: 'https://bluejaytg.com/success',
-      cancel_url: 'https://bluejaytg.com/cancel',
-      metadata: {
-        name,
-        instagram,
-        bookingLink
-      }
-    });
 
     return {
       statusCode: 200,
